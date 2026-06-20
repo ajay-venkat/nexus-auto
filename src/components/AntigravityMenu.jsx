@@ -7,6 +7,7 @@ const MENU_ITEMS = [
   { id: 'pickup', label: 'Pickup Requests', icon: Truck, badgeKey: 'pickup' },
   { id: 'reminders', label: 'Service Reminders', icon: Bell, badgeKey: 'reminders' },
   { id: 'cost', label: 'Cost Estimates', icon: Calculator },
+  { id: 'track-search', label: 'Track Vehicle', icon: Calculator }, // We will handle 'track-search' in DashboardScreen
 ];
 
 export default function AntigravityMenu({ onSelect, notificationCount, hasActivePickup }) {
