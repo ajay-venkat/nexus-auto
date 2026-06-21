@@ -8,6 +8,7 @@
   justify-content: space-between;
   pointer-events: none; /* Let clicks pass to physics canvas */
   z-index: 20;
+  box-sizing: border-box;
 }
 
 .hud-stats-group {
@@ -58,15 +59,27 @@
 }
 
 @media (max-width: 768px) {
+  .hud-container {
+    padding: 70px 16px 16px;
+    flex-direction: column;
+    gap: 12px;
+  }
   .hud-stats-group {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
   }
   .hud-stat-card {
     padding: 12px 16px;
-    min-width: 140px;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
   .hud-stat-value {
     font-size: 1.5rem;
+  }
+  .hud-stat-label {
+    font-size: 0.75rem;
   }
 }
